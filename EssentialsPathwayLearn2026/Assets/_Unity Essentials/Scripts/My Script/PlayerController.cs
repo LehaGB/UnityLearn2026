@@ -11,10 +11,20 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
 
+    public float jumpForce;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         if (rb == null) Debug.LogWarning("PlayerController needs a Rigidbody.");
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        }
     }
 
     private void FixedUpdate()
