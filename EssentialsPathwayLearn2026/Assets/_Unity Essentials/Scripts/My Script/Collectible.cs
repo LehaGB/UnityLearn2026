@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-
+    public GameObject onCllectEffect;
     public float rotationSpeed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,4 +16,16 @@ public class Collectible : MonoBehaviour
     {
         transform.Rotate(0, rotationSpeed, 0);
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Destroy the collectible.
+            Destroy(gameObject);
+            Instantiate(onCllectEffect, transform.position, transform.rotation);
+        }
+    }
+
 }
