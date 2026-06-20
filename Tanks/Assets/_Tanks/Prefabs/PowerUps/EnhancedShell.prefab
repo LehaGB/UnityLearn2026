@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PowerUpType: 5
-  m_CollectFX: {fileID: 8822060725471291870, guid: da1c8b323de15f84da1462d4bab0c020, type: 3}
+  m_CollectFX: {fileID: 19807510, guid: 537afde59eeba4c82897def1dccfba0a, type: 3}
   m_DurationTime: 5
   m_DamageReduction: 0.5
   m_SpeedBonus: 5
